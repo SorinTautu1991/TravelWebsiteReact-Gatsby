@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { FaBars } from "react-icons/fa"
 
 const Header = () => {
   return (
@@ -30,4 +31,18 @@ const NavLink = styled(Link)`
   height: 100%;
   padding: 0 1rem;
   cursor: pointer;
+`
+
+const Bars = styled(FaBars)`
+  display: none;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  } ;
 `
